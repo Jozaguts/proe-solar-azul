@@ -16,7 +16,7 @@
             <p
               class="pb-4"
             >Esta independencia energética protege contra el aumento del coste de la electricidad y contra la volatilidad en el precio de los combustibles</p>
-            <a href="service.html" class="ss_btn">Cotizar</a>
+            <a @click="$store.commit('setAsunto', 'Paneles Solares')" class="ss_btn">Cotizar</a>
           </div>
         </div>
       </div>

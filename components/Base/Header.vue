@@ -8,7 +8,7 @@
           <div class="col-lg-3 col-md-7 col-sm-12 col-12 align-self-center">
             <div class="ss_logo">
               <router-link to="/">
-                <img class="img-fluid logo" src="../../assets/images/svg/logo.svg" alt="logo" />
+                <img class="img-fluid logo" src="~assets/images/svg/logo.svg" alt="logo" />
               </router-link>
             </div>
           </div>
@@ -16,7 +16,8 @@
             <div class="ss_menu">
               <ul>
                 <li>
-                  <a v-scroll-to="'#services'">Servicios</a>
+                  <router-link to="/servicios">Servicios</router-link>
+                  <!-- <a v-scroll-to="'#services'">Servicios</a> -->
                 </li>
                 <li>
                   <router-link to="/cotizar">Cotización</router-link>
@@ -34,12 +35,17 @@
           </div>
         </div>
       </div>
+      <!-- servicos complement -->
+      <ServicesBanner />
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+import ServicesBanner from '@/components/Base/ServicesBanner'
+export default {
+  components: { ServicesBanner }
+}
 </script>
 
 <style>

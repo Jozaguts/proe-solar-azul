@@ -4,7 +4,13 @@ export const state = () => ({
 
 export const mutations = {
     setAsunto(state, payload) {
-        state.asunto = payload
+        try {
+            state.asunto = payload
+        } catch (error) {
+            console.error(error)
+        } finally {
+            this.$router.push('/cotizar')
+        }
     }
 }
 export const getters = {

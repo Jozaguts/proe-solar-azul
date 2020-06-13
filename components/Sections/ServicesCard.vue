@@ -69,9 +69,7 @@ export default {
         this.$store.commit('setAsunto', asunto)
       } catch (error) {
         console.error(error)
-      } finally {
-        this.$router.push('/cotizar')
-      }
+      } 
     }
   }
 }

@@ -9,7 +9,7 @@
             Proyectos de obra eléctrica y solares
             <!-- <span>obra electrica y solares</span> -->
           </h1>
-          <a href="#" class="white_btn">Cotizar</a>
+          <a href="#" class="white_btn" @click="$store.commit('setAsunto', 'Cotización')">Cotizar</a>
         </div>
       </div>
       <div class="col-lg-7">

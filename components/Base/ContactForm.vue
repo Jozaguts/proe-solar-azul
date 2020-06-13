@@ -78,7 +78,7 @@
                   <label>Nombre</label>
                   <input
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder="Ingrese su nombre"
                     name="full_name"
                     id="full_name"
                     class="require"
@@ -86,12 +86,12 @@
                   />
                 </div>
                 <div class="ss_contact_form">
-                  <label>Correo Electrónico:</label>
+                  <label>Correo:</label>
                   <input
                     type="text"
                     name="email"
                     id="email"
-                    placeholder="Enter your email"
+                    placeholder="Ingresa tu correo electrónico"
                     class="require"
                     data-valid="email"
                     data-error="Email should be valid."
@@ -103,7 +103,7 @@
                     type="text"
                     name="subject"
                     id="subject"
-                    placeholder="Enter your subject"
+                    placeholder="Indique el asunto"
                     class="require"
                     :value="getAsunto"
                   />
@@ -113,7 +113,7 @@
                   <textarea
                     name="message"
                     id="message"
-                    placeholder="Enter your message"
+                    placeholder="¿En qué lo podemos ayudar?"
                     class="require"
                   ></textarea>
                 </div>
@@ -145,7 +145,6 @@ export default {
   },
   computed: {
     getAsunto() {
-      // console.log(this.$store.state)
       return this.$store.state.asunto
     }
   }
