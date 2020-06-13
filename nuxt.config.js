@@ -12,7 +12,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
   /*
@@ -23,6 +23,13 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~assets/css/main.scss',
+    '~assets/css/animate.css',
+    '~assets/css/fontawesome.min.css',
+    '~assets/css/fonts.css',
+    '~assets/css/magnific-popup.css',
+    '~assets/css/style.css',
+    '~assets/css/swiper.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -54,7 +61,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
