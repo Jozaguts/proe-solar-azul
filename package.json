@@ -15,7 +15,9 @@
     "bootstrap": "^4.5.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "v-owl-carousel": "^1.0.8",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.10.0",

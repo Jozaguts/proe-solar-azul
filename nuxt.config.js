@@ -35,6 +35,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: 'plugins/owl-carousel.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -47,6 +48,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'vue-scrollto/nuxt',
   ],
   /*
   ** Axios module configuration
