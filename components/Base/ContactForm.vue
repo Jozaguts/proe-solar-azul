@@ -73,53 +73,68 @@
             <div class="ss_contact_right">
               <h3>formulario de contacto</h3>
               <h1>Ponte en contacto...</h1>
-              <form>
-                <div class="ss_contact_form">
-                  <label>Nombre</label>
-                  <input
-                    type="text"
-                    placeholder="Ingrese su nombre"
-                    name="full_name"
-                    id="full_name"
-                    class="require"
-                    v-focus
-                  />
-                </div>
-                <div class="ss_contact_form">
-                  <label>Correo:</label>
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="Ingresa tu correo electrónico"
-                    class="require"
-                    data-valid="email"
-                    data-error="Email should be valid."
-                  />
-                </div>
-                <div class="ss_contact_form">
-                  <label>Asunto</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="Indique el asunto"
-                    class="require"
-                    :value="getAsunto"
-                  />
-                </div>
-                <div class="ss_contact_form">
-                  <label class="ss_message">Mensaje</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="¿En qué lo podemos ayudar?"
-                    class="require"
-                  ></textarea>
-                </div>
-                <button type="button" class="ss_btn submitForm">Enviar</button>
-                <div class="response"></div>
-              </form>
+              <ValidationObserver v-slot="{ valid }">
+                <form @submit.prevent="onSubmit">
+                  <div class="ss_contact_form">
+                    <ValidationProvider v-slot="{errors}" name="full_name" rules="required">
+                      <label>Nombre</label>
+                      <input
+                        type="text"
+                        placeholder="Ingrese su nombre"
+                        name="full_name"
+                        v-model="fullName"
+                        id="full_name"
+                        class="require"
+                        v-focus
+                      />
+                      <small class="text-danger">{{ errors[0] }}</small>
+                    </ValidationProvider>
+                  </div>
+                  <div class="ss_contact_form">
+                    <ValidationProvider v-slot="{errors}" name="email" rules="email|required">
+                      <label>Correo:</label>
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Ingresa tu correo electrónico"
+                        class="require"
+                        v-model="email"
+                      />
+                      <small class="text-danger">{{errors[0]}}</small>
+                    </ValidationProvider>
+                  </div>
+                  <div class="ss_contact_form">
+                    <ValidationProvider v-slot="{errors}" name="subject" rules="required">
+                      <label>Asunto</label>
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        placeholder="Indique el asunto"
+                        class="require"
+                        v-model="asunto"
+                      />
+                      <small class="text-danger">{{ errors[0] }}</small>
+                    </ValidationProvider>
+                  </div>
+                  <div class="ss_contact_form">
+                    <ValidationProvider v-slot="{errors}" name="message" rules="required">
+                    <label class="ss_message">Mensaje</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="¿En qué lo podemos ayudar?"
+                      class="require"
+                      v-model="message"
+                    ></textarea>
+                    <small class="text-danger">{{errors[0]}}</small>
+                    </ValidationProvider>
+                  </div>
+                  <button type="submit" class="ss_btn submitForm" :disabled="!valid">Enviar</button>
+                  <div class="response"></div>
+                </form>
+              </ValidationObserver>
             </div>
           </div>
         </div>
@@ -129,6 +144,7 @@
 </template>
 
 <script>
+import { ValidationObserver, ValidationProvider } from 'vee-validate'
 export default {
   directives: {
     focus: {
@@ -138,15 +154,27 @@ export default {
       }
     }
   },
+  components: { ValidationObserver, ValidationProvider },
   data() {
     return {
-      asunto: ''
+      asunto: '',
+      fullName: '',
+      email: '',
+      message: ''
+    }
+  },
+  methods: {
+    onSubmit() {
+      console.log(' aqui la logica para mandar el correo')
     }
   },
   computed: {
     getAsunto() {
-      return this.$store.state.asunto
+      return (this.asunto = this.$store.state.asunto)
     }
+  },
+  mounted() {
+    this.getAsunto
   }
 }
 </script>

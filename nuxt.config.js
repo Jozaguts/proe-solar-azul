@@ -35,7 +35,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: 'plugins/owl-carousel.js', ssr: false }
+    { src: 'plugins/owl-carousel.js', ssr: false },
+    '~/plugins/vee-validate.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -60,6 +61,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    transpile: ["vee-validate/dist/rules"],
     /*
     ** You can extend webpack config here
     */
