@@ -1,5 +1,6 @@
 export const state = () => ({
-    asunto: ""
+    asunto: "",
+    showMenu: false,
 })
 
 export const mutations = {
@@ -11,10 +12,20 @@ export const mutations = {
         } finally {
             this.$router.push('/cotizar')
         }
+    },
+    toggleMenu(state) {
+        try {
+            state.showMenu = !state.showMenu
+        } catch (error) {
+            console.error(error)
+        }
     }
 }
 export const getters = {
     getAsunto(state) {
         return state.asunto
+    },
+    geStatusShowMenu(state) {
+        return state.showMenu
     }
 }

@@ -2857,7 +2857,7 @@ div#thumbs_img ul{
 	}
 	.ss_menu.ss_toggle .ss_menu_bar:after {
 		position: absolute;
-		content: 'Main Menu';
+		content: 'Menu';
 		font-size: 20px;
 		color: #ffffff;
 		left: -141px;
@@ -2866,7 +2866,7 @@ div#thumbs_img ul{
 		padding-right: 15px;
 	}
 	.ss_menu > ul {
-		background: #1b1464 ;
+		background: #5b86e5 ;
 		position: fixed;
 		left: -250px;
 		top: 0;
@@ -2940,7 +2940,7 @@ div#thumbs_img ul{
 		position: absolute;
 		top: -25px;
 		content: '';
-		background: #1b1464;
+		background: #5b86e5;
 		height: 58px;
 		left: -170px;
 		width: 210px;

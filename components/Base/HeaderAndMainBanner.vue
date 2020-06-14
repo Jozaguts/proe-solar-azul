@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="col-lg-9 col-md-5 col-sm-12 col-12 align-self-center">
-            <div class="ss_menu">
+            <div class="ss_menu" :class="{'ss_toggle': $store.state.showMenu}">
               <ul>
                 <li>
                   <a v-scroll-to="'#services'">Servicios</a>
@@ -25,6 +25,13 @@
                   <router-link to="/nosotros">Nosotros</router-link>
                 </li>
               </ul>
+              <div class="head_icon">
+                <div class="ss_menu_bar" @click="$store.commit('toggleMenu')">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
