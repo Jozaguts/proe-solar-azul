@@ -1,5 +1,11 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/proe-solar-azul/'
+  }
+} : {}
 
 module.exports = {
+  ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page
@@ -15,6 +21,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
+
   /*
   ** Customize the progress-bar color
   */
@@ -43,6 +50,7 @@ module.exports = {
   */
   buildModules: [
   ],
+
   /*
   ** Nuxt.js modules
   */
