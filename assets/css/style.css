@@ -1848,12 +1848,12 @@ a:hover .fa-pinterest-p {
 }
 .ss_video_img {
     position: absolute;
-    left: 225px;
+    right: 0px;
     top: -57px;
     transition: 0.5s;
 }
 .ss_about_img:hover .ss_video_img {
-    left: 200px;
+    transform: scale(1.2);
 }
 .ss_about_main{
 	padding:157px 0px 157px;

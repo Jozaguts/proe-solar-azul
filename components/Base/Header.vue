@@ -17,34 +17,31 @@
               <ul>
                 <li>
                   <router-link to="/servicios">Servicios</router-link>
-                  <!-- <a v-scroll-to="'#services'">Servicios</a> -->
                 </li>
                 <li>
                   <router-link to="/cotizar">Cotización</router-link>
-                  <!-- <a router-link="/cotizar">Cotización</a> -->
                 </li>
                 <li>
-                  <a v-scroll-to="'#about'">Nosotros</a>
-                </li>
-
-                <li>
-                  <a v-scroll-to="'#contact'">Contacto</a>
+                  <router-link to="/nosotros">Nosotros</router-link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <!-- servicos complement -->
+      <!-- servicos banner complement -->
       <ServicesBanner />
+      <!-- About banneer complement -->
+      <AboutBanner />
     </div>
   </section>
 </template>
 
 <script>
 import ServicesBanner from '@/components/Base/ServicesBanner'
+import AboutBanner from '@/components/Base/AboutBanner'
 export default {
-  components: { ServicesBanner }
+  components: { ServicesBanner, AboutBanner }
 }
 </script>
 

@@ -1,13 +1,13 @@
 <template>
-  <div class="ss_breadcrumb text-center" v-if="this.$route.path === '/servicios'">
+  <div class="ss_breadcrumb text-center" v-if="this.$route.path==='/nosotros'">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>Servicios</h1>
+          <h1>Nosotros</h1>
           <ul>
             <li>
               <router-link to="/">Inicio</router-link>
-              <span>/ Servicios</span>
+              <span>/ Nosotros</span>
             </li>
           </ul>
         </div>

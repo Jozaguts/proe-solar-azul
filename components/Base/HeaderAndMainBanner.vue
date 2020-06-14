@@ -20,14 +20,9 @@
                 </li>
                 <li>
                   <router-link to="/cotizar">Cotización</router-link>
-                  <!-- <a router-link="/cotizar">Cotización</a> -->
                 </li>
                 <li>
-                  <a v-scroll-to="'#about'">Nosotros</a>
-                </li>
-
-                <li>
-                  <a v-scroll-to="'#contact'">Contact Us</a>
+                  <router-link to="/nosotros">Nosotros</router-link>
                 </li>
               </ul>
             </div>
@@ -40,7 +35,6 @@
 </template>
 
 <script>
-
 import MainBanner from '~/components/Base/MainBanner'
 export default {
   components: { MainBanner: MainBanner }
