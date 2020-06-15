@@ -12,9 +12,9 @@
                     d="m204.5 458.605469v51.855469l-12.539062-10.128907c-1.9375-1.566406-48.035157-38.992187-94.78125-92.660156-64.484376-74.035156-97.179688-140.492187-97.179688-197.519531v-5.652344c0-112.761719 91.738281-204.5 204.5-204.5s204.5 91.738281 204.5 204.5v5.652344c0 4.789062-.253906 9.652344-.714844 14.574218l-39.992187-36.484374c-8.191407-83.15625-78.519531-148.339844-163.792969-148.339844-90.757812 0-164.597656 73.839844-164.597656 164.597656v5.652344c0 96.367187 124.164062 213.027344 164.597656 248.453125zm122.699219-28.660157h59.851562v-59.851562h-59.851562zm-122.699219-310.238281c46.753906 0 84.792969 38.039063 84.792969 84.792969s-38.039063 84.792969-84.792969 84.792969-84.792969-38.039063-84.792969-84.792969 38.039063-84.792969 84.792969-84.792969zm0 39.902344c-24.753906 0-44.890625 20.136719-44.890625 44.890625 0 24.75 20.136719 44.890625 44.890625 44.890625 24.75 0 44.890625-20.140625 44.890625-44.890625 0-24.753906-20.140625-44.890625-44.890625-44.890625zm280.609375 243.222656-11.21875-10.234375v64.058594c0 29.828125-24.269531 54.09375-54.097656 54.09375h-126.332031c-29.828126 0-54.097657-24.265625-54.097657-54.09375v-64.058594l-11.21875 10.234375-26.890625-29.476562 155.371094-141.746094 155.375 141.746094zm-51.121094-46.636719-77.363281-70.574218-77.359375 70.574218v100.457032c0 7.828125 6.367187 14.195312 14.195313 14.195312h126.332031c7.828125 0 14.195312-6.367187 14.195312-14.195312zm0 0"
                   />
                 </svg>
-                <h2>Dirección:</h2>
+                <!-- <h2>Dirección:</h2>
                 <p>340 Liberty Street Taunton, MA 02780</p>
-                <p>7435 S. Amherst Ave. New Britain, CT 06051</p>
+                <p>7435 S. Amherst Ave. New Britain, CT 06051</p>-->
               </div>
               <div class="ss_contact_two">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485.211 485.211">
@@ -30,8 +30,8 @@
                   </g>
                 </svg>
                 <h2>Correo Electrónico:</h2>
-                <p>support@solarexample.com</p>
-                <p>help@solarexample.com</p>
+                <p>Contacto@ProeSolar.com.mx</p>
+                <!-- <p>help@solarexample.com</p> -->
               </div>
               <div class="ss_contact_three">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.532 488.532">
@@ -64,8 +64,12 @@
                   </g>
                 </svg>
                 <h2>Teléfono:</h2>
-                <p>+21-1800-456-951</p>
-                <p>+21-1800-753-852</p>
+                <p>
+                  <a class="text-white link-phone" href="tel:322 102 9376">322 102 9376</a>
+                </p>
+                <p>
+                  <a class="text-white link-phone" href="tel:322 169 9397">322 169 9397</a>
+                </p>
               </div>
             </div>
           </div>
@@ -120,15 +124,15 @@
                   </div>
                   <div class="ss_contact_form">
                     <ValidationProvider v-slot="{errors}" name="message" rules="required">
-                    <label class="ss_message">Mensaje</label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      placeholder="¿En qué lo podemos ayudar?"
-                      class="require"
-                      v-model="message"
-                    ></textarea>
-                    <small class="text-danger">{{errors[0]}}</small>
+                      <label class="ss_message">Mensaje</label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="¿En qué lo podemos ayudar?"
+                        class="require"
+                        v-model="message"
+                      ></textarea>
+                      <small class="text-danger">{{errors[0]}}</small>
                     </ValidationProvider>
                   </div>
                   <button type="submit" class="ss_btn submitForm" :disabled="!valid">Enviar</button>
@@ -180,4 +184,7 @@ export default {
 </script>
 
 <style>
+.link-phone {
+  text-decoration: underline;
+}
 </style>

@@ -14,15 +14,21 @@
       ></iframe>
     </section>
     <ContactFormComponent />
+    <FooterComponent />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Base/Header'
 import ContactForm from '@/components/Base/ContactForm'
+import FooterComponent from '@/components/Sections/Footer'
 
 export default {
-  components: { HeaderComponent: Header, ContactFormComponent: ContactForm }
+  components: {
+    HeaderComponent: Header,
+    ContactFormComponent: ContactForm,
+    FooterComponent
+  }
 }
 </script>
 

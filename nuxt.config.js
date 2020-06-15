@@ -5,9 +5,7 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 } : {}
 
 module.exports = {
-  router: {
-    base: '/proe-solar-azul/'
-  },
+  ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page

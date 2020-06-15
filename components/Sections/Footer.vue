@@ -1,15 +1,20 @@
 <template>
   <section class="ss_section_footer">
     <!--===== Section Footer Start =====-->
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-12">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="ss_foot_sec">
-                <a href="index.html">
-                  <img class="img-fluid" src="@/assets/images/svg/logo.svg" alt="logo" />
-                </a>
+                <router-link to="/">
+                  <img
+                    class="img-fluid"
+                    src="@/assets/images/svg/logo.svg"
+                    alt="logo"
+                    width="300px"
+                  />
+                </router-link>
                 <p>Proyectos de obra eléctrica y solares</p>
                 <!-- <ul class="social_share">
                   <li>
@@ -88,29 +93,16 @@
                 <h2 class="ss_foot_head">Productos</h2>
                 <ul>
                   <li>
-                    <a href="#">
-                      <i class="fas fa-circle"></i> Paneles solares
-                    </a>
+                    <i class="fas fa-circle"></i>Calentadores solares
                   </li>
                   <li>
-                    <a href="#">
-                      <i class="fas fa-circle"></i> Calentadores solares
-                    </a>
+                    <i class="fas fa-circle"></i> Soporte técnico
                   </li>
                   <li>
-                    <a href="#">
-                      <i class="fas fa-circle"></i> Soporte técnico
-                    </a>
+                    <i class="fas fa-circle"></i>Estudio de eficiencia energética
                   </li>
                   <li>
-                    <a href="#">
-                      <i class="fas fa-circle"></i> Estudio de eficiencia energética
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fas fa-circle"></i> Instalación de sistemas fotovoltaicos
-                    </a>
+                    <i class="fas fa-circle"></i>Instalación de sistemas fotovoltaicos
                   </li>
                 </ul>
               </div>
@@ -124,29 +116,24 @@
                 <h2 class="ss_foot_head">Menú</h2>
                 <ul>
                   <li>
-                    <a href="#">
-                      <i class="fas fa-circle"></i> Home
-                    </a>
+                    <router-link to="/">
+                      <i class="fas fa-circle"></i> Inicio
+                    </router-link>
                   </li>
                   <li>
-                    <a href="service.html">
+                    <router-link to="/cotizar">
                       <i class="fas fa-circle"></i> Cotización
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="trade-show.html">
+                    <router-link to="/nosotros">
                       <i class="fas fa-circle"></i> Nosotros
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="pv-industry.html">
+                    <router-link to="/">
                       <i class="fas fa-circle"></i> Servicios
-                    </a>
-                  </li>
-                  <li>
-                    <a href="contact.html">
-                      <i class="fas fa-circle"></i> Contactanos
-                    </a>
+                    </router-link>
                   </li>
                 </ul>
               </div>
@@ -187,9 +174,10 @@
               <div class="ss_foot_sec">
                 <h2 class="ss_foot_head">Contactanos</h2>
                 <ul>
-                  <li>Direccion : 297 Poor House Road Lumberton, NC 28358</li>
-                  <li>Correo Electrónico : contactacto@proesolar.com.mx</li>
-                  <li>Teléfono : 1800-589-652</li>
+                  <!-- <li>Direccion : </li> -->
+                  <li>Correo Electrónico : contacto@proesolar.com.mx</li>
+                  <li>Teléfono : 322 102 9376</li>
+                  <li>Teléfono : 322 169 9397</li>
                   <li>Siio web : https://proesolar.com.mx</li>
                 </ul>
               </div>
