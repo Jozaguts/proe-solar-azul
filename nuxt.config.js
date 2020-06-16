@@ -5,10 +5,10 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 } : {}
 
 module.exports = {
-  // ...routerBase,
-  router: {
-    base: '/proe-solar-azul/'
-  },
+  ...routerBase,
+  // router: {
+  //   base: '/proe-solar-azul/'
+  // },
   mode: 'universal',
   /*
   ** Headers of the page
@@ -24,6 +24,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
+  serverMiddleware: [
+    '~/api/mail'
+    // { path: '/enviar-correo', handler: '~/api/mail.js' },
+  ],
 
   /*
   ** Customize the progress-bar color
