@@ -65,6 +65,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'vue-scrollto/nuxt',
+    'vue-sweetalert2/nuxt'
   ],
   /*
   ** Axios module configuration

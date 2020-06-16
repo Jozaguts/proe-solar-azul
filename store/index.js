@@ -1,12 +1,12 @@
 export const state = () => ({
-    asunto: "",
+    subject: "",
     showMenu: false,
 })
 
 export const mutations = {
-    setAsunto(state, payload) {
+    setSubject(state, payload) {
         try {
-            state.asunto = payload
+            state.subject = payload
         } catch (error) {
             console.error(error)
         } finally {
@@ -22,8 +22,8 @@ export const mutations = {
     }
 }
 export const getters = {
-    getAsunto(state) {
-        return state.asunto
+    getSubject(state) {
+        return state.subject
     },
     geStatusShowMenu(state) {
         return state.showMenu

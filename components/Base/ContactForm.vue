@@ -77,7 +77,7 @@
             <div class="ss_contact_right">
               <h3>formulario de contacto</h3>
               <h1>Ponte en contacto...</h1>
-              <ValidationObserver v-slot="{ valid }">
+              <ValidationObserver v-slot="{ valid }" ref="form">
                 <form @submit.prevent="onSubmit">
                   <div class="ss_contact_form">
                     <ValidationProvider v-slot="{errors}" name="full_name" rules="required">
@@ -86,7 +86,7 @@
                         type="text"
                         placeholder="Ingrese su nombre"
                         name="full_name"
-                        v-model="fullName"
+                        v-model="credentials.fullName"
                         id="full_name"
                         class="require"
                         v-focus
@@ -103,7 +103,7 @@
                         id="email"
                         placeholder="Ingresa tu correo electrónico"
                         class="require"
-                        v-model="email"
+                        v-model="credentials.email"
                       />
                       <small class="text-danger">{{errors[0]}}</small>
                     </ValidationProvider>
@@ -117,7 +117,7 @@
                         id="subject"
                         placeholder="Indique el asunto"
                         class="require"
-                        v-model="asunto"
+                        v-model="credentials.subject"
                       />
                       <small class="text-danger">{{ errors[0] }}</small>
                     </ValidationProvider>
@@ -130,7 +130,7 @@
                         id="message"
                         placeholder="¿En qué lo podemos ayudar?"
                         class="require"
-                        v-model="message"
+                        v-model="credentials.message"
                       ></textarea>
                       <small class="text-danger">{{errors[0]}}</small>
                     </ValidationProvider>
@@ -161,29 +161,75 @@ export default {
   components: { ValidationObserver, ValidationProvider },
   data() {
     return {
-      asunto: '',
-      fullName: '',
-      email: '',
-      message: ''
+      credentials: {
+        subject: '',
+        fullName: '',
+        email: '',
+        message: ''
+      }
     }
   },
   methods: {
     onSubmit() {
-      console.log(' aqui la logica para mandar el correo')
+      try {
+        this.$axios
+          .post('/enviar-correo', {
+            data: this.credentials
+          })
+          .then(response => {
+            this.$swal({
+              position: 'top-end',
+              icon: 'success',
+              title: response.data.success,
+              showConfirmButton: false,
+              timer: 2000
+            }).then(() => {
+              this.credentials.subject = this.credentials.fullName = this.credentials.email = this.credentials.message =
+                ''
+              /* reset errors into form */
+              this.$nextTick(() => {
+                this.$refs.form.reset()
+              })
+            })
+          })
+          .catch(error => {
+            this.$swal({
+              position: 'top-end',
+              icon: 'error',
+              title:
+                'Error al enviar, Por favor cominiquese directameto al 322 102 9376 o  322 169 9397 ',
+              showConfirmButton: false,
+              timer: 5000
+            }).then(() => {
+              this.credentials.subject = this.credentials.fullName = this.credentials.email = this.credentials.message =
+                ''
+              /* reset errors into form */
+              this.$nextTick(() => {
+                this.$refs.form.reset()
+              })
+            })
+          })
+      } catch (error) {
+        console.error(error)
+      } finally {
+        // console.log('termino')
+      }
     }
   },
   computed: {
-    getAsunto() {
-      return (this.asunto = this.$store.state.asunto)
+    getSubject() {
+      return (this.credentials.subject = this.$store.state.subject)
     }
   },
   mounted() {
-    this.getAsunto
+    this.getSubject
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '~sweetalert2/src/variables';
+@import '~sweetalert2/src/sweetalert2';
 .link-phone {
   text-decoration: underline;
 }

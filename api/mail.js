@@ -13,25 +13,31 @@ var options = {
 
 var mailer = nodemailer.createTransport(sgTransport(options));
 
-var email = {
-    to: ['jozaguts@gmail.com'],
-    from: 'jozaguts@hotmail.com',
-    subject: 'Hi there',
-    text: 'Awesome sauce',
-    html: '<b>Awesome sauce</b>'
 
-};
 
 
 app.post('/', function (req, res) {
+    const { subject, message, fullName, email } = req.body.data;
+    var emailTemplate = {
+        to: ['jozaguts@gmail.com'], //aqui en correo de admin de la página "christian" donde van a llegar los correos 
+        from: 'jozaguts@hotmail.com', // aqui el correo registrado y autorizado de sendgrid "contacto@proesolar.com.mx"
+        subject: subject, //asunto 
+        text: message, //mensaje
+        html: `<b>Mensaje envido desde ProeSolar.com.mx </b> <br>
+                <b>Asunto:</b> <p>${subject}</p> </br>
+                <b>Nombre:</b> <p>${fullName}</p> </br>
+                <b>Correo:</b> <p>${email}</p> </br>
+                <b>Mensaje:</b> <p> ${message}</p> </br>`
+    };
 
-    mailer.sendMail(email, function (err, res) {
-        if (err) {
-            console.log(err)
-        }
-        console.log(res);
-    });
-    res.end();
+    // mailer.sendMail(emailTemplate, function (err, res) {
+    //     if (err) {
+    //         console.log(err)
+    //     }
+    //     console.log(res);
+    // });
+    res.json({ success: 'Mensaje enviado con éxito' }).end()
+    // res.end();
 
 })
 
