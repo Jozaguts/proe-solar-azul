@@ -1,4 +1,4 @@
-const routerBase = process.env.DEPLOY_ENV === 'gh_pages' ? {
+const routerBase = process.env.DEPLOY_ENV === 'gh-pages' ? {
   router: {
     base: '/proe-solar-azul/'
   }
