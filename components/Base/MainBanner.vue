@@ -33,7 +33,7 @@
               />
             </carousel>
           </no-ssr>
-          <img class="img-fluid ss_cloud" src="@/assets/images/cloud.png" alt="nubes" />
+          <img  loading="lazy" class="img-fluid ss_cloud" src="@/assets/images/cloud.png" alt="nubes" />
         </div>
       </div>
     </div>

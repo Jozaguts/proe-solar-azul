@@ -8,7 +8,7 @@
           <div class="col-lg-3 col-md-7 col-sm-12 col-12 align-self-center">
             <div class="ss_logo">
               <router-link to="/">
-                <img class="img-fluid logo" src="~assets/images/svg/logo.svg" alt="logo" />
+                <img  loading="lazy" class="img-fluid logo" src="~assets/images/svg/logo.svg" alt="logo" />
               </router-link>
             </div>
           </div>

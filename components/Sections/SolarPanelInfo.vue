@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="ss_three_left wow fadeIn">
-            <img class="img-fluid" src="@/assets/images/young-solar-panel.jpg" alt="image" />
+            <img  loading="lazy" class="img-fluid" src="@/assets/images/young-solar-panel.jpg" alt="image" />
           </div>
         </div>
         <div class="col-lg-6 align-self-center">

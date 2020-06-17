@@ -8,7 +8,7 @@
           <div class="col-lg-3 col-md-7 col-sm-12 col-12 align-self-center">
             <div class="ss_logo">
               <a v-scroll-to="'#home'">
-                <img class="img-fluid logo" src="~assets/images/svg/logo.svg" alt="logo" />
+                <img  loading="lazy" class="img-fluid logo" src="~assets/images/svg/logo.svg" alt="logo" />
               </a>
             </div>
           </div>

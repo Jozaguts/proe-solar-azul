@@ -10,7 +10,7 @@
             @click="getInfo('Instalación de sistemas fotovoltaicos')"
           >
             <div class="ss_two_sec wow fadeIn" data-wow-delay="0.3s">
-              <img class="img-fluid" src="@/assets/images/svg/icon3.svg" alt="image" />
+              <img  loading="lazy" class="img-fluid" src="@/assets/images/svg/icon3.svg" alt="image" />
               <h2>Instalación de sistemas fotovoltaicos</h2>
               <p>Realización de instalación a cualquier escala a nivel residencial, comercio e industria.</p>
               <p class="get-info">Haz click para solicitar informacion</p>

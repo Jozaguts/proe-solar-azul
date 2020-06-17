@@ -36,7 +36,7 @@
                   data-wow-delay="0.1s"
                   data-wow-duration="2s"
                 >
-                  <img class="img-fluid" src="~assets/images/services/whychoseus.jpg" alt="image" />
+                  <img  loading="lazy" class="img-fluid" src="~assets/images/services/whychoseus.jpg" alt="image" />
                 </div>
               </div>
               <div class="col-lg-5">
