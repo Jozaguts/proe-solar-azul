@@ -2761,7 +2761,7 @@ div#thumbs_img ul{
 }
 @media (max-width: 1399px) and (min-width: 1299px){
 	.ss_banner_main {
-		padding: 100px 0px 215px;
+		padding: 0px 0px 130px;
 	}
 }
 @media screen and (max-width: 1399px){
@@ -3408,7 +3408,7 @@ div#thumbs_img ul{
 		padding-right: 15px;
 	}
 	.ss_banner_main {
-		padding:0px 0px 50px;
+		padding:20px 0px 150px;
 	}
 	.ss_banner_right {
 		margin-top: 10px;

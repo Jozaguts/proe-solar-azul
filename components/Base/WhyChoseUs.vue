@@ -1,7 +1,7 @@
 <template>
   <section class="ss_wchoose_us spacer_top">
     <!--===== Section Three Start =====-->
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-0">
           <div class="ss_box_bg">

@@ -1,7 +1,7 @@
 <template>
   <section class="ss_section_three spacer_bottom">
     <!--===== Section Three Start =====-->
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="ss_three_left wow fadeIn">

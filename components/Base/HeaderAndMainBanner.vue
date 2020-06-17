@@ -1,7 +1,7 @@
 <template>
   <section class="ss_index_one" id="home">
     <!--===== Section One Start =====-->
-    <div class="container-fluid">
+    <div class="container">
       <div class="ss_header">
         <!--===== Top Menu =====-->
         <div class="row" id="home">

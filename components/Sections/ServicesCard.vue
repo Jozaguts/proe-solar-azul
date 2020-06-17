@@ -2,7 +2,7 @@
   <!-- Cards Service -->
   <section class="ss_section_two spacer_top" id="services">
     <!--===== Section Two Start =====-->
-    <div class="container-fluid">
+    <div class="container">
       <div class="ss_two">
         <div class="row">
           <div
@@ -66,10 +66,10 @@ export default {
   methods: {
     getInfo(asunto) {
       try {
-        this.$store.commit('setAsunto', asunto)
+        this.$store.commit('setSubject', asunto)
       } catch (error) {
         console.error(error)
-      } 
+      }
     }
   }
 }
