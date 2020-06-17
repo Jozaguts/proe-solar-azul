@@ -9,9 +9,9 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate",
-    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:GH_PAGES": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=GH_PAGES --cleanup"
+    "build:gh-pages": "cross-env DEPLOY_ENV=gh_pages nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=gh_pages nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh_pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
